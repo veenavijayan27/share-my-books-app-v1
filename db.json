@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "id": 2,
+      "title": "The Secret",
+      "author": "Rhonde Bryan",
+      "desc": "A self help book that motivates reader",
+      "category": "Motivational123",
+      "description": "A self help book that motivates reader"
+    }
+  ],
+  "users": [
+    {
+      "email": "veena@gmail.com",
+      "password": "$2a$10$tX27CpZ3pisIB6mGFTJWi.qMSVhyAN24io5YVB6vHCeI1mEl01q/a",
+      "id": 1
+    },
+    {
+      "email": "veena123@yahoo.com",
+      "password": "$2a$10$kld2/mSB1cspLk9FCinwfexmOsQPSfkxbO9.5pomJeaTNsM6rbebK",
+      "id": 2
+    },
+    {
+      "email": "sruti@gmail.com",
+      "password": "$2a$10$xpxUp6yQWg6qM/9cEqxR3OBULTvNsDMKmXXy8j4AfDyO9pwcI0n4m",
+      "id": 3
+    },
+    {
+      "email": "varsha@yahoo.com",
+      "password": "$2a$10$uSrTjNWtcjAyRkZWkKe0Cufc6KiGoQmHbG4jmYRGu1VPDKqO6yrKq",
+      "id": 4
+    },
+    {
+      "email": "asha@gmail.com",
+      "password": "$2a$10$X7KmBlw.413MjgQefs/0BOajqiI4.yKRIQl9mE1O4bTQs6bqqNiy2",
+      "id": 5
+    }
+  ]
+}
