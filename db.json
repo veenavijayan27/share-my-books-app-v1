@@ -1,12 +1,11 @@
 {
   "books": [
     {
-      "id": 2,
-      "title": "The Secret",
-      "author": "Rhonde Bryan",
-      "desc": "A self help book that motivates reader",
-      "category": "Motivational123",
-      "description": "A self help book that motivates reader"
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "desc": "Novel",
+      "category": "Fiction",
+      "id": 3
     }
   ],
   "users": [
@@ -34,6 +33,31 @@
       "email": "asha@gmail.com",
       "password": "$2a$10$X7KmBlw.413MjgQefs/0BOajqiI4.yKRIQl9mE1O4bTQs6bqqNiy2",
       "id": 5
+    },
+    {
+      "email": "abcd@gmail.com",
+      "password": "$2a$10$12bZQR3ZyYx.nEbZO6SsH.jwnbe9J30gn6fjlgrsjRvjikJAN2fPm",
+      "id": 6
+    },
+    {
+      "email": "abcde@gmail.com",
+      "password": "$2a$10$3O7svOfpbRrzHXXsdQh2W.Z8a0wK5ZPG/tTz9lM5ZIo.tvd0gT85a",
+      "id": 7
+    },
+    {
+      "email": "sanu@yahoo.com",
+      "password": "$2a$10$uQ6ILDNywVi0DwxrYhR.euuC9T7c5TQJI.bTmZ6thBSZ22BYGaef2",
+      "id": 8
+    },
+    {
+      "email": "sanu@gmail.com",
+      "password": "$2a$10$o.pVU0s1cQ10dtLUfWxu8eg/WVdEtfMkXP.21r9SJMjcLWzKlsidK",
+      "id": 9
+    },
+    {
+      "email": "chinnu@yahoo.com",
+      "password": "$2a$10$rtxxzOoT18E.qSvFxcJmRe3UjWmQJ6y26XLsMIJ2ZgBz2BSs4L0/2",
+      "id": 10
     }
   ]
 }
