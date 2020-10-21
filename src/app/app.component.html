@@ -1,0 +1,30 @@
+
+<div class="content" role="main">
+
+<!-- Header -->
+<div class="header" role="banner">
+  <div class="primeHeader">
+    <span routerLink = "/home">{{title}}</span>
+    <div class="btn-wrapper">
+    <div class="login-buttons" *ngIf="!isLoggedIn">
+      <a class="header-btn" routerLink = "/loginregister/login">Login</a>/
+      <a class="header-btn" routerLink = "/loginregister/register">Register</a>
+    </div>
+      <a class="header-btn" routerLink = "/home" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
+    </div>
+  
+    <div class="theme-select-wrapper">
+      <label class="switch">
+        <input id="switchTheme" type="checkbox" (click)="changeTheme()" [formControl]="switchTheme">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>
+  
+  <router-outlet></router-outlet> 
+
+</div>
+
+
+

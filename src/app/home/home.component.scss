@@ -1,0 +1,43 @@
+.home-container{
+  padding: 20px;
+  background-color: #e7f3f2;
+  button{
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 lightgrey;    
+    border: 0.5px solid #57595d;
+  }
+  .card-container{
+    .card{
+      min-height: 60px;
+      color: #57595d;
+      background-color: #bfd8d8;
+      padding: 10px 20px;
+      margin: 10px 0px;
+      box-sizing: border-box;  
+      div{
+        margin: 5px 0px;
+      }  
+      .bk-title{
+        font-size: 1.5rem;
+        font-weight: 600;
+      } 
+      .bk-author{
+        font-weight: 300;
+      }
+      .bk-desc{
+        font-weight: 300;
+      } 
+      .bk-category{
+        font-weight: 300;
+      }  
+      .action-buttons{
+        button{
+          background-color: #cccccc;
+          margin: 5px 10px 5px 0px;
+        }
+      }
+    }
+  }
+}

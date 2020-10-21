@@ -1,0 +1,18 @@
+
+<div class="home-container">
+
+  <button *ngIf="isLoggedIn" routerLink="/addeditbook">Add Book</button>
+    <div class="card-container">
+      <div class="card" *ngFor="let book of books$">
+        <div class="bk-title">{{book.title}}</div>
+        <div class="bk-author">Author: {{book.author}}</div>
+        <div class="bk-desc">Description: {{book.desc}}</div>
+        <div class="bk-category">Category: {{book.category}}</div>
+        <div class="action-buttons" *ngIf="isLoggedIn">
+          <button [routerLink]="['/addeditbook',book.id]">Edit Book</button>
+          <button (click)=deleteBook(book.id)>Delete Book</button>
+        </div>
+      </div>
+    </div>
+
+</div>
