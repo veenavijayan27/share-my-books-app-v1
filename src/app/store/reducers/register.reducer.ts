@@ -13,42 +13,42 @@ export interface RegisterState {
 export const initialState: RegisterState = {
   isRegistered: false,
   user: null,
-  token : null,
-  message : null
+  token: null,
+  message: null,
 };
 
 export const registerReducer = createReducer(
-    initialState,
-    // Register reducer
-    on(RegisterActions.register, (state, action) => {
-            return {
-            ...state,
-            isRegistered : false,
-            user : action.user,
-            token : null,
-            message : null
-        };
-    }),
+  initialState,
+  // Register reducer
+  on(RegisterActions.register, (state: RegisterState, action) => {
+    return {
+      ...state,
+      isRegistered: false,
+      user: action.user,
+      token: null,
+      message: null,
+    };
+  }),
 
-    // RegisterSuccess reducer
-    on(RegisterActions.registerSuccess, (state, action) => {
-        return {
-            ...state,
-            isRegistered : true,
-            user : null,
-            token : action.accessToken.accessToken,
-            message : null,
-        };
-    }),
+  // RegisterSuccess reducer
+  on(RegisterActions.registerSuccess, (state: RegisterState, action) => {
+    return {
+      ...state,
+      isRegistered: true,
+      user: null,
+      token: action.accessToken.accessToken,
+      message: null,
+    };
+  }),
 
-    // RegisterFailuer reducer
-    on(RegisterActions.registerFailure, (state, action) => {
-        return {
-            ...state,
-            isRegistered : false,
-            user : null,
-            token : null,
-            message : action.error,
-        };
-    })
+  // RegisterFailuer reducer
+  on(RegisterActions.registerFailure, (state: RegisterState, action) => {
+    return {
+      ...state,
+      isRegistered: false,
+      user: null,
+      token: null,
+      message: action.error,
+    };
+  })
 );

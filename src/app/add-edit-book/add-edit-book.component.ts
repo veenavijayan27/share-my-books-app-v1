@@ -10,58 +10,57 @@ import { getBookDetails } from '../store/selectors/books.selector';
 @Component({
   selector: 'app-add-edit-book',
   templateUrl: './add-edit-book.component.html',
-  styleUrls: ['./add-edit-book.component.scss']
+  styleUrls: ['./add-edit-book.component.scss'],
 })
 export class AddEditBookComponent implements OnInit {
-
   book = {} as Book;
   addBook = true;
   submitted = false;
   id: string;
   tempBook: Book[];
 
-  constructor(private store: Store, private router: Router, private route: ActivatedRoute) {
-    this.route.paramMap.subscribe((params) => {
+  constructor(
+    private _store: Store,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) {
+    this._route.paramMap.subscribe((params) => {
       this.id = params.get('id');
     });
 
     // Load book details for edit
     if (this.id) {
       this.addBook = false;
-      this.store.dispatch(loadBook({bookId: this.id}));
-      this.store.select(getBookDetails).subscribe( response => {
+      this._store.dispatch(loadBook({ bookId: this.id }));
+      this._store.select(getBookDetails).subscribe((response) => {
         this.tempBook = response;
-        this.book = {...this.tempBook[0]};
+        this.book = { ...this.tempBook[0] };
       });
     }
-
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   // Add book details in server
-  onAddBook(form: NgForm): void {
+  OnAddBook(form: NgForm): void {
     this.submitted = true;
     if (form.valid) {
-      this.store.dispatch(addBook({book : this.book}));
+      this._store.dispatch(addBook({ book: this.book }));
     }
   }
 
   // Update book details in server
-  onUpdateBook(form: NgForm): void{
+  OnUpdateBook(form: NgForm): void {
     this.submitted = true;
     if (form.valid) {
-        const update: Update<Book> = {
+      const update: Update<Book> = {
         id: this.book.id,
         changes: {
           ...this.book,
-          ...form.value
-        }
+          ...form.value,
+        },
       };
-
-        this.store.dispatch(bookActionTypes.updateBook({update}));
+      this._store.dispatch(bookActionTypes.updateBook({ update }));
     }
   }
-
 }

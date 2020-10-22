@@ -2,13 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-
 import { ThemeService } from './services/theme.service';
-import { AuthguardService } from './services/authguard.service';
+import { AuthGuardService } from './services/authguard.service';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,11 +32,11 @@ import { LoginRegisterComponent } from './login-register/login-register.componen
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    StoreModule.forRoot({user: userReducer, register: registerReducer, books: bookReducer}),
+    StoreModule.forRoot({ user: userReducer, register: registerReducer, books: bookReducer }),
     EffectsModule.forRoot([UserEffects, RegisterEffects, BookEffects]),
     HttpClientModule
   ],
-  providers: [ ThemeService, AuthguardService ],
+  providers: [ThemeService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

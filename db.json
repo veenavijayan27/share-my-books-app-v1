@@ -1,11 +1,19 @@
 {
   "books": [
     {
+      "title": "The Secret",
+      "author": "Rhonda Byrne",
+      "desc": "A motivational book",
+      "category": "Motivational",
+      "id": 4,
+      "description": "A motivational book"
+    },
+    {
       "title": "The Alchemist",
       "author": "Paulo Coelho",
       "desc": "Novel",
       "category": "Fiction",
-      "id": 3
+      "id": 5
     }
   ],
   "users": [
@@ -58,6 +66,16 @@
       "email": "chinnu@yahoo.com",
       "password": "$2a$10$rtxxzOoT18E.qSvFxcJmRe3UjWmQJ6y26XLsMIJ2ZgBz2BSs4L0/2",
       "id": 10
+    },
+    {
+      "email": "user@yahoo.com",
+      "password": "$2a$10$/NgwUn8Jzwye21B1kRJ4hu1E8yGVhRxkUh4MNdRGaYyVBJzvbJ1LW",
+      "id": 11
+    },
+    {
+      "email": "varna@gmail.com",
+      "password": "$2a$10$aU9vDSrMNXsygABcGBLfn.aJeiwayhGGv6U.k5MfbHpQZs9hytCBq",
+      "id": 12
     }
   ]
 }

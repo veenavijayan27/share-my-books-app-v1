@@ -4,21 +4,18 @@ import { CanActivate, Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthguardService {
-
+export class AuthGuardService {
   public accessToken: string;
 
-
-  constructor(private router: Router) {
+  constructor(private _router: Router) {
     this.accessToken = localStorage.getItem('accessToken');
   }
 
   // Redirect to login page if not logged in
-  canActivate(): boolean  {
+  canActivate(): boolean {
     if (!this.accessToken) {
-      this.router.navigateByUrl('/loginregister/login');
+      this._router.navigateByUrl('/login-register/login');
     }
     return true;
   }
-
 }

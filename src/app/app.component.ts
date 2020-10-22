@@ -7,39 +7,35 @@ import { authSelector } from './store/selectors/login.selector';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
-  title = 'shareMyBooks';
-  isLoggedIn: boolean;
+  title = 'Share My Books';
+  isLoggedIn = false;
   switchTheme = new FormControl(false);
 
-  constructor(private store: Store, private themeService: ThemeService){
-  }
+  constructor(private _store: Store, private _themeService: ThemeService) {}
 
-  ngOnInit(): void{
-    this.store.select(authSelector).subscribe(state => {
+  ngOnInit(): void {
+    this._store.select(authSelector).subscribe((state) => {
       if (state) {
         this.isLoggedIn = state.isAuthenticated;
       }
     });
   }
 
-
-  changeTheme(): void{
-    this.switchTheme.valueChanges.subscribe(value => {
+  OnChangeTheme(): void {
+    this.switchTheme.valueChanges.subscribe((value) => {
       if (value) {
-        this.themeService.toggleDark();
+        this._themeService.toggleDark();
       } else {
-        this.themeService.toggleLight();
+        this._themeService.toggleLight();
       }
     });
   }
 
-  logout(): void {
+  OnLogout(): void {
     localStorage.removeItem('accessToken');
     window.location.href = '/home';
   }
-
 }

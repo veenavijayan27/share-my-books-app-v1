@@ -36,5 +36,4 @@ export class ThemeService {
       document.documentElement.style.setProperty(`--${k}`, theme[k])
     );
   }
-
 }

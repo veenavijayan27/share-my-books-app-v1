@@ -7,16 +7,19 @@ import * as LoginActions from '../actions/login.actions';
 
 @Injectable()
 export class UserEffects {
-    @Effect()
-    login$ = this.actions$.pipe(
-      ofType(LoginActions.login),
-      mergeMap(action =>
-        this.loginRegisterService.loginUser(action.user).pipe(
-          map(res => LoginActions.loginSuccess({accessToken : res})),
-          catchError(error => of(LoginActions.loginFailure({error})))
-        )
+  @Effect()
+  login$ = this._actions$.pipe(
+    ofType(LoginActions.login),
+    mergeMap((action) =>
+      this._loginRegisterService.loginUser(action.user).pipe(
+        map((res) => LoginActions.loginSuccess({ accessToken: res })),
+        catchError((error) => of(LoginActions.loginFailure({ error })))
       )
-    );
+    )
+  );
 
-  constructor(private actions$: Actions, private loginRegisterService: LoginRegisterService) {}
+  constructor(
+    private _actions$: Actions,
+    private _loginRegisterService: LoginRegisterService
+  ) {}
 }

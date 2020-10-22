@@ -1,24 +1,28 @@
-.formContent{
-    background-color: lightgray;    
-    margin: 20px 0px;
-    padding: 20px 0px;
-    .formDiv{
-        margin: 20px;
-        input,
-        textarea{
-            width: 90%;
-            height: fit-content;
-            min-height: 30px;
-            border-radius: 6px;
-            border: none;    
-            font-family: Arial;    
-            &:focus{
-                outline: none;
-                box-shadow: darkgray;
-            }
-        }
-        p{
-            margin: 15px 0px 5px 0px;
-        }
+.formContent {
+  background-color: lightgray;
+  margin: 20px 0;
+  padding: 20px 0;
+
+  .formDiv {
+    margin: 20px;
+
+    input,
+    textarea {
+      width: 90%;
+      height: fit-content;
+      min-height: 30px;
+      border-radius: 6px;
+      border: none;
+      font-family: Arial;
+
+      &:focus {
+        outline: none;
+        box-shadow: darkgray;
+      }
     }
+
+    p {
+      margin: 15px 0 5px 0;
+    }
+  }
 }

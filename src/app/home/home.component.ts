@@ -14,12 +14,14 @@ export class HomeComponent implements OnInit {
   isLoggedIn: boolean;
   books$: any;
 
-  constructor(private store: Store) { }
+  constructor(private _store: Store) { }
 
   ngOnInit(): void {
-    this.store.dispatch(bookActionTypes.loadBooks()); // dispatch load books actions
-    this.store.select(getAllBooksList).subscribe(result =>  this.books$ = result); // get books list
-    this.store.select(authSelector).subscribe(state => {
+    this._store.dispatch(bookActionTypes.loadBooks()); // dispatch load books actions
+    this._store.select(getAllBooksList)
+    .subscribe(result =>  this.books$ = result); // get books list
+    this._store.select(authSelector)
+    .subscribe(state => {
       if (state) {
         this.isLoggedIn = state.isAuthenticated;
       }
@@ -27,8 +29,8 @@ export class HomeComponent implements OnInit {
   }
 
   // Delete a book
-  deleteBook(bookId: number): void{
-    this.store.dispatch(bookActionTypes.deleteBook({bookId}));
+  OnDeleteBook(bookId: number): void{
+    this._store.dispatch(bookActionTypes.deleteBook({bookId}));
   }
 
 }
