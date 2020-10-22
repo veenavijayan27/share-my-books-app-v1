@@ -76,6 +76,11 @@
       "email": "varna@gmail.com",
       "password": "$2a$10$aU9vDSrMNXsygABcGBLfn.aJeiwayhGGv6U.k5MfbHpQZs9hytCBq",
       "id": 12
+    },
+    {
+      "email": "roja@gmail.com",
+      "password": "$2a$10$EcvfQZpfEPwT052nmFPPWOhRJo.jJjNI2n2uPVBiZyrIlfj7CmOQG",
+      "id": 13
     }
   ]
 }

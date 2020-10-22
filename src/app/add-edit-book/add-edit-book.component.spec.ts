@@ -58,4 +58,9 @@ describe('AddEditBookComponent', () => {
     const buttonText = fixture.nativeElement.querySelector('.buttonPrimary');
     expect(buttonText.textContent).toBe('Add');
   });
+
+  it('should render title', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.AddEditHeader').textContent).toBe('Add Book Details');
+  });
 });
